@@ -79,11 +79,12 @@
       <!-- Footer -->
       <footer id="footer">
         <section>
-          <form method="post" action="#">
+          <form class="form-group" method="post" action="sucess/">
+            {% csrf_token %}
             <div class="fields">
               <div class="field">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" id="name" class="form-control"/>
               </div>
               <div class="field">
                 <label for="email">Email</label>
@@ -95,7 +96,7 @@
               </div>
             </div>
             <ul class="actions">
-              <li><input type="submit" value="Send Message" /></li>
+              <button type="submit" value="Send Message"></li>
             </ul>
           </form>
         </section>
